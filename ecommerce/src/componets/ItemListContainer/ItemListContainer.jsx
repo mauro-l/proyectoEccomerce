@@ -1,8 +1,8 @@
 
-function ItemListContainer(greeting) {
+function ItemListContainer({greeting}) {
   return (
     <div>
-        <h1>{greeting}</h1>
+        <h1 className="text-center text-5xl font-bold">{greeting}</h1>
     </div>
   )
 }
