@@ -1,0 +1,7 @@
+.logoBg{
+    background-image: url('./otaku.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+}

@@ -6,7 +6,22 @@ export default {
     'node_modules/flowbite-react/lib/esm/**/*.js',
   ],
   theme: {
-    extend: {},
+    extend: {
+    },
+    colors: {
+      'esky': '#6FC9CD',
+      'ered': '#ac2026',
+      'tgray': '#F2F4F7',
+    },
+    fontFamily: {
+      'sans': ['"Bebas Neue", sans-serif'],
+      'roboto': ['"Roboto", sans-serif'],
+    },
+    letterSpacing: {
+      normal: '1em',
+      wide: '1.25em',
+      wider: '1.5em',
+    },
   },
   plugins: [
     require('flowbite/plugin'),
