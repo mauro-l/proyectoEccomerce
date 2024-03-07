@@ -9,7 +9,24 @@ function Filters() {
             <h2 className="text-3xl">Filtros</h2>
             <p className="text-gray-300 font-roboto text-sm opacity-0">Limpiar todo <span className="ms-3">X</span></p>
         </article>
-        <article className="">
+        <article className="mb-3 border-b border-gray-300 pb-1">
+            <h3 className="text-3xl">Categoria</h3>
+            <div className="p-2">                
+                <div className="flex items-center py-1">
+                    <input defaultChecked id="default-radio-1" type="radio" defaultValue="comics" name="default-radio" className="w-4 h-4 text-esky bg-gray-100 border-gray-300 focus:ring-esky dark:focus:ring-esky dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                    <label htmlFor="default-radio-1" className="ms-2 text-lg font-medium text-gray-500 dark:text-gray-300">Comics & Mangas</label>
+                </div>
+                <div className="flex items-center py-1">
+                    <input id="default-radio-2" type="radio" defaultValue="libros" name="default-radio" className="w-4 h-4 text-esky bg-gray-100 border-gray-300 focus:ring-esky dark:focus:ring-esky dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                    <label htmlFor="default-radio-2" className="ms-2 text-lg font-medium text-gray-500 dark:text-gray-300">Libros</label>
+                </div>
+                <div className="flex items-center py-1">
+                    <input id="default-radio-3" type="radio" defaultValue="funkos" name="default-radio" className="w-4 h-4 text-esky bg-gray-100 border-gray-300 focus:ring-esky dark:focus:ring-esky dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                    <label htmlFor="default-radio-3" className="ms-2 text-lg font-medium text-gray-500 dark:text-gray-300">Funko Pop</label>
+                </div>
+            </div>
+        </article>
+        <article className="bg-tgray rounded-md px-2 py-3 -ml-2">
             <ul>
                 <li className="flex justify-between border-b border-gray-200 pb-2">
                     <p className="text-xl text-nowrap">Envio Fast⚡</p>
@@ -41,23 +58,6 @@ function Filters() {
                 <input id="labels-range-input" type="range" defaultValue="750" min="100" max="1500" className="h-1 w-full bg-gray-200 appearance-none cursor-pointer range-sm dark:bg-gray-700"/>
                 <span className="text-sm text-gray-500 dark:text-gray-400 absolute start-0 -bottom-6">Min ($100)</span>
                 <span className="text-sm text-gray-500 dark:text-gray-400 absolute end-0 -bottom-6">Max ($1500)</span>
-            </div>
-        </article>
-        <article>
-            <h3 className="text-3xl">Categoria</h3>
-            <div className="p-2">                
-                <div className="flex items-center py-1">
-                    <input defaultChecked id="default-radio-1" type="radio" defaultValue="comics" name="default-radio" className="w-4 h-4 text-esky bg-gray-100 border-gray-300 focus:ring-esky dark:focus:ring-esky dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-                    <label htmlFor="default-radio-1" className="ms-2 text-sm font-medium text-gray-500 dark:text-gray-300">Comics & Mangas</label>
-                </div>
-                <div className="flex items-center py-1">
-                    <input id="default-radio-2" type="radio" defaultValue="libros" name="default-radio" className="w-4 h-4 text-esky bg-gray-100 border-gray-300 focus:ring-esky dark:focus:ring-esky dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-                    <label htmlFor="default-radio-2" className="ms-2 text-sm font-medium text-gray-500 dark:text-gray-300">Libros</label>
-                </div>
-                <div className="flex items-center py-1">
-                    <input id="default-radio-3" type="radio" defaultValue="funkos" name="default-radio" className="w-4 h-4 text-esky bg-gray-100 border-gray-300 focus:ring-esky dark:focus:ring-esky dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-                    <label htmlFor="default-radio-3" className="ms-2 text-sm font-medium text-gray-500 dark:text-gray-300">Funko Pop</label>
-                </div>
             </div>
         </article>
         <article>

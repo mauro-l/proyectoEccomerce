@@ -4,14 +4,18 @@ import { Link } from 'react-router-dom'
 import StartRating from '../Starts/StartRating'
 import addCart from '../icons/shopping-cart-plus.svg'
 
-function Card({id, img, name, price}) {
+function Card({id, img, name, title, price}) {
 
-    let nameUrl = name.replace(/\. /g, "-").replace(/\s/g, "-");
+    let nameUrl = '';
+
+    if(name){
+        nameUrl = name.replace(/\. /g, "-").replace(/\s/g, "-");
+    }
 
     return (
         <div className="flex justify-center gap-3">
             <div className="relative max-w-xs w-60 bg-white border border-transparent md:hover:bg-[#F2F4F7] md:hover:border-x-2 md:hover:border-t-2 md:hover:border-gray-200 transition duration-300 dark:bg-gray-800 dark:border-gray-700 px-1 py-4 space-y-4 group">
-                <Link to={`/${nameUrl}/p/${id}`}>
+                <Link to={`/${nameUrl ? nameUrl : title}/p/${id}`}>
                     <img width={400} height={600} className='w-56 h-64 object-contain object-center mx-auto' src={img} alt={`${name}${id}`} />
                 </Link>
                 <a href="#">

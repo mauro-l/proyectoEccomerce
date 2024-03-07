@@ -1,21 +1,34 @@
 
 import Banner from '../Banner/Banner'
 import { useEffect, useState } from "react"
-import { getProducts } from "../../asyncMock";
+//import { getProducts } from "../../asyncMock";
 import ItemList from "./ItemList/ItemList";
 import Filters from './Filter/Filters';
+import { useParams } from 'react-router-dom';
+import { getApiProducts } from '../../services/products';
 
 const ItemListContainer = ({titulo}) => {
 
     const [products, setProducts] = useState([]);
-
+    const { categoryId } = useParams();
+    
     useEffect(()=>{
-        getProducts()
-        .then((res)=>setProducts(res))
-        .catch(err => console.log('error al cargar los productos: ', err))
-    }, []);
 
-    console.log('item list container: ', titulo)
+      const fetchData = async () => {
+        try{
+          const product = await getApiProducts(categoryId);
+          setProducts(product);
+        } catch (error) {console.log(error)}
+      }
+        /* getProducts()
+        .then((res)=>setProducts(res))
+        .catch(err => console.log('error al cargar los productos: ', err)) */
+
+        /* console.log(getApiProducts(categoryId)) */
+        fetchData();
+    }, [categoryId]);
+
+    console.log('item list container: ', products, titulo)
 
   return (
     <>
