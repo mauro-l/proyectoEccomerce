@@ -7,16 +7,20 @@ import mini from './pagosImg'
 
 const ItemDetail = (product) => {
 
+    console.log('PRODUCT', product)
+    const pic = product.pictures[0].url || null ;
+    console.log( pic)
+    //const pic = null
 
     return (
         <div className='p-4 md:p-6 container mx-auto space-y-4'>
-            <section className='flex flex-col md:items-center md:flex-row my-5 px-14 mx-auto'>
-                <picture><img src={product.img} className='md:w-1/2 flex mx-auto py-2' alt={`${product.description}${product.name}`} /></picture>
-                <article className='md:w-1/2 py-3 flex flex-col justify-start items-center'>
+            <section className='flex flex-col md:items-center md:flex-row my-5 px-14 mx-auto md:justify-center md:gap-4'>
+                <picture><img src={pic || product.img} className='md:w-[350px] flex mx-auto py-2' alt={`${product.description}${product.name}`} /></picture>
+                <article className='md:w-1/2 py-3 flex flex-col justify-start items-center mx-2'>
                     <div>
                         <div>
                             <p className='text-[#797C7F]'>{product.category}</p>
-                            <h2 className='text-3xl'>{product.name}</h2>
+                            <h2 className='text-3xl'>{product.name || product.title}</h2>
                             <h3 className='text-gray-400 font-roboto my-1'>{product.licence}</h3>
                             <div className='flex flex-col md:flex-row items-center gap-2'>
                                 <p className='text-xl me-3'>${product.price}</p>

@@ -12,8 +12,8 @@ fetch(`https://api.mercadolibre.com/sites/MLA/search?seller_id=186616505`) */
 export const getApiProducts = async (category) => {
     
     let products = [];
-
-    if (category === 'comics'){
+    
+    if (category === 'libros'){
         try{
             const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?seller_id=186616505&limit=16`);
             const data = await response.json();
@@ -21,9 +21,19 @@ export const getApiProducts = async (category) => {
         } catch (error) {
             console.log('hubo un problema al traer los productos: ', error)
         }
+    
+    }
+    if (category === 'comics'){
+        try{
+            const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?seller_id=57113380&limit=16`);
+            const data = await response.json();
+            products = data.results;
+        } catch (error) {
+            console.log('hubo un problema al traer los productos: ', error)
+        }
     }
 
-    if (category === 'funkos'){
+    if (category === 'funkos' || !category){
         try{
             products = await getProducts();
         } catch (error){
