@@ -55,7 +55,7 @@ function FixedPanel() {
       </div>
       {isOpened &&(
         <aside 
-          className={`fixed top-0 right-0 z-40 w-64 h-screen transition-transform ${isOpened? '-translate-x-full' : ''} sm:translate-x-0`} 
+          className={`fixed top-0 right-0 z-40 w-64 lg:w-80 h-screen transition-transform ${isOpened? '-translate-x-full' : ''} translate-x-0`} 
           id="default-sidebar" 
           aria-label="Sidebar"
           >

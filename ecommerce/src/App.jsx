@@ -7,7 +7,7 @@ import Home from "./componets/Home/Home"
 import WishList from "./componets/WishList/WishList"
 import ItemListContainer from "./componets/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from './componets/ItemDetailContainer/ItemDetailContainer';
-import Cart from './componets/Cart/Cart'
+import Cart from './componets/Cart/CartListContainer'
 import Checkout from './componets/Cart/Checkout/Checkout';
 
 function App() {
