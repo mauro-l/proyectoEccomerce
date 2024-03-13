@@ -18,16 +18,12 @@ const ItemDetailContainer = () => {
       try{
         const response = await getApiDetails({typeId, productId})
         if(response){
-          console.log(response)
           setProducts(response);
           setIsLoading(true);
         }else{console.error('no hubo respuesta', response)}
       }catch (err) {console.log('Hubo un problema al renderizar el producto; ', err)}
     }
-    
     fetchData()
-
-    console.log(productId)
 
   }, [productId])
 
