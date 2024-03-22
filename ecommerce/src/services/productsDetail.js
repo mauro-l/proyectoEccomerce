@@ -13,6 +13,9 @@ export const getApiDetails = async ({typeId, productId }) =>{
         catch(err){
             console.log('error al cargar el producto', err);
         }
+
+        return product;
+
     }
 
     if(typeId === 'p'){
